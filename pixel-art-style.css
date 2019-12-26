@@ -36,3 +36,29 @@ body {
     height: 30px;
     border: solid #aaa 1px;
 }
+
+#main-wrapper {
+    background-color: #aaa;
+    padding-top: 32px;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 35px;
+}
+
+#control-panel {
+    display: inline-block;
+    width: 90%;
+}
+
+#palette {
+    margin: 10px 0;
+}
+
+.current-color-preview {
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}

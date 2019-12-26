@@ -1,4 +1,5 @@
 window.onload = function() {
+    setSizes();
     createField();
     createPalette();
     updateSelectedColor('000000');
@@ -18,13 +19,18 @@ const paletteColors = ['a44841', 'ed665b', 'ef7e76', 'db9d55', 'f5af5f', 'f8c588
     '8067f8', 'b09dfa', '714495', 'bc6ffa', 'd4a0fb', '000000', '353535', '666666', '989898',
     'cbcbcb', 'ffffff', '3a2821', '4e342b', '6e483b', '896a5e', 'a68e85'
 ]
-const canvasSize = { width: 70, height: 50 };
+const canvasSize = { width: 50, height: 50 };
 let sltdColor = document.getElementById('selected-color-preview');
 let mouseDown = false;
 
 const pixel = document.createElement('div');
 pixel.classList.add('pixel');
 pixel.dataset['color'] = "";
+
+function setSizes() {
+    const mWrapper = document.getElementById('main-wrapper');
+    mWrapper.style.width = canvasSize.width * 12 + 60 + 'px';
+}
 
 function createField() {
     const canvas = document.querySelector('#canvas');
